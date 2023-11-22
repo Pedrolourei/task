@@ -1,0 +1,28 @@
+
+{
+    "hosting": {
+      "public": "public",
+      "ignore": ["firebase.json", "**/node_modules/**"]
+    },
+    "database": {
+      "rules": {
+        ".read": true,
+        ".write": "auth.uid != null"
+      }
+    },
+    "firestore": {
+      "rules": {
+        ".read": true,
+        ".write": "auth.uid != null"
+      }
+    },
+    "storage": {
+      "rules": {
+        ".read": true,
+        ".write": "auth.uid != null"
+      }
+    },
+    "functions": {
+      "source": "functions"
+    }
+  }
